@@ -6,14 +6,14 @@ if (kbuilder.hasErrors()) {
 	throw new Error(kbuilder.getErrors().toString());
 	}
 	
-	final KnowledgeBase kbase = KnowledgeFactory.newKnowledgeBase();
-	kbase.addKnowledgePackages(kbuilder.getKnowledgePackages());
+	final 'KnowledgeBase' kbase = 'KnowledgeFactory'.newKnowledgeBase();
+	kbase.'addKnowledgePackages'(kbuilder.getKnowledgePackages());
 	
-	final KieSessionConfiguration config = KnowledgeBaseFactory.newKnowledgeSessionConfiguration();
+	final KieSessionConfiguration config = 'KnowledgeBaseFactory'.newKnowledgeSessionConfiguration();
 	for (final Map.Entry<String, String) property : properties.entrySet()) {
 		config.setProperty(property.getKey(), property.getValue());
 	}
 	
-	return kbase.newStatefulKnowledgeSession(config, null);
+	return kbase.'newStatefulKnowledgeSession'(config, null);
 
 }
